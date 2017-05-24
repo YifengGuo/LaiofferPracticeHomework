@@ -41,27 +41,27 @@ public class GoldbachConjecture {
 	}
 
 	/* my edition for checking if a is a prime number*/
-	private static boolean isPrime(int a) {
-		int i = 2;
-		while(i < a) {
-			if(a % i == 0) {
-				return false;
-			}
-			else i++;
-		}
-		if(i == a) {
-			return true;
-		}
-		else return false;
-	}
-	
-	/*solution for checking the prime validity*/
 //	private static boolean isPrime(int a) {
-//		for(int i = 2; i * i <= a ; i++) {
+//		int i = 2;
+//		while(i < a) {
 //			if(a % i == 0) {
 //				return false;
 //			}
+//			else i++;
 //		}
-//		return true;
+//		if(i == a) {
+//			return true;
+//		}
+//		else return false;
 //	}
+	
+	/*solution for checking the prime validity*/
+	private static boolean isPrime(int a) {
+		for(int i = 2; i * i <= a ; i++) {
+			if(a % i == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
 }
