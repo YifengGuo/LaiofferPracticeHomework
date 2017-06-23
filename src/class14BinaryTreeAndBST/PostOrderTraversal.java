@@ -6,6 +6,19 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class PostOrderTraversal {
+	/*
+	 * the essence of post order of BST by iteration is the direction
+	 * are we going down or going up from left subtree or going up from right subtree?
+	 * maintain a previous Node which is the last traversed node in last iteration, to 
+	 * record the previous visiting node in the traversing path, so that we know what the 
+	 * direction we are taking now and what is the direction we are taking next
+	 * 
+	 * steps: stack.offer(root)
+	 * 		  if prev is null(cur is root)  -> going down(left tree has priority)
+	 * 		  if prev is current's parent -> going down(left tree has priority)
+	 * 		  if prev is current's left  -> left subtree finished, going current.right if existed,if not existed,pop current and going up
+	 * 	      if prev is current's right -> right subtree finished, pop current, going up
+	 */
 	public List<Integer> postOrder(TreeNode root) {
 		List<Integer> result = new ArrayList<>();
 		if(root == null) {
