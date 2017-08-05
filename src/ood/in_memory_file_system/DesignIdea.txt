@@ -1,0 +1,63 @@
+/*
+In-Memory:
+        OOD basic idea: abstract the problem
+                        concrete the basic functionality  --> API design
+                        apply basic ADT to manage the object(file) to store in the memory
+
+
+As for file system:	 file system -> tree
+					 files can be abstract as TreeNode(directory and file)
+					 path: any TreeNode to any TreeNode
+
+					 So operations on the files can be regarded as actions of TreeNode (add, delete, search, move(remove and insert to another subtree))
+
+
+Design details: first, at least we need two classes : file and directory
+
+           	    second, we can figure out there are many similar attributes among two classes  -> initialize an abstract class (Entry)
+
+           	    the type of file content is better to represented by byte[]
+
+           	    the implementation of opreations on TreeNode(Entry) shall be wrapped in a FileSystem.class and 
+           	    it maintains a field as root directory
+           	    The Entry class itself shall not be visible to users
+
+           	    for FileSystem, we could better separate it into two parts  -> client end and server end 
+           	    																all the api designed respectively
+           	    	if something needs changing, client could send corresponding paramaters via certain APIs to server end
+           	    	and the server will resolve the params and permission if needed from client end , then do the process internally
+
+           	    mkdir:  1. parameter  intuitively using absolute path is a decent idea
+           	    		2. how to design mkdir method if using relative path? 
+           	    		   			how to specify the parent directory of file? thinking from user end.
+
+
+System Design : From high level to low level
+                thinking from basic functions need to be implemented
+                					for functions: thinking what is input and what is output!!!
+                then thinks other features and detailed implementations
+
+
+Data Center
+	Cluster
+		Rack
+			Node/Server
+
+
+Distributed File System: 
+		The basic functionalities are the same 
+		But the use case, scalability is different
+	1.Use file system interfaces to manage your data(files and directories)
+	2.Data is distributed in many machines
+	3.Examples: GFS(Google FileSystem)  HDFS
+	4.When to use DFS?
+		To check the relationship of data (Database or DFS)
+			DistributedFileSystem: read and write operation are not complex, store log or easy attributes of data
+			Database: complex read and write, the relationship is complex or the attributes are abundant
+*/
+
+
+
+		
+
+
