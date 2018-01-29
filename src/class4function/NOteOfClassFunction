@@ -1,0 +1,40 @@
+A Java method is a collection of statements that are grouped together to perform an operation
+
+e.g:
+	public static int add(int a, int b) {
+		return a + b;
+	}
+	
+	public static: modifier
+	int: return type
+	add: name of function
+	int a, int b: list of parameters (formal arguments)
+	
+	Function signature in Java:  NAME OF FUNCTION + THE LIST OF THE PARAMETER "TYPES"
+	                                                      order of parameter types matter
+	                                                      
+      Return type cannot be used to identify different functions, because JVM will do type conversion during compilation
+      
+      when use if, be careful about the return value. Don't take complier too smart.
+      
+Main function is the entry point of Java program. All other functions are directly or indirectly invoked by main function
+
+public static void main(String[] args) {
+	...
+}
+
+why main function's return type is void?
+	Because some thread invokes the exit method class System. In other words, the program may exit before or after 
+	the main() finishes. SO a return value from main would therefore become meanlingless.
+	
+	If you want the program to return a status code, call:
+		System.exit(int status);
+		eg:
+		public class Solution {
+			public static void main(String[] args) {
+				System.out.println("Hi");
+				System.exit(1);
+				System.out.println("Yo"); // cannot be printed
+			}
+		}
+		
