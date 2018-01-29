@@ -1,0 +1,139 @@
+Object
+	Class
+	Object: Instance of a class
+	Reference: point to object
+	Dereferencing: access to the object itself
+	
+	Initialization of object:
+		X x = new X(...): Object initialization
+							initialization is followed by a call of constructor
+		
+		X x: object declaration
+		
+Object Memory Layout:
+	Memory space in Java: Stack and Heap
+	
+	Stack: In computer science, a call stack is a stack data structure that stores information about the 
+	       active subroutines of a computer program. This kind of stack is also known as an execution stack,
+	       program stack, control stack, run-time stack, or machine stack. And is often shortened to just the
+	       "stack"
+	       stack variable has the lifetime of the function scope
+	       
+	Heap: Java objects reside in an area call the heap. The heap is created when the JVM starts up and may
+	      increase or decrease in size while the application runs
+	      
+	     
+	Primitive Data Types:
+		int
+		double
+		float
+		short
+		long
+		
+		boolean
+		
+		char
+		byte
+		
+
+	Static: Members(fields, methods, classes) belong to class, not object
+
+	Modifier:
+		public - open to everyone
+		protected - children and package can access
+		(default) - package private
+		private
+		
+		
+	Comparison between Stack and Heap
+		1. Local primitive type variables are always on stack
+		
+		2. Whenever an object is created, it's always stored in the Heap space and 
+		   Stack contains the reference to it (this is important)
+		   	example:
+		   		public class Test {
+		   			public static void main(String[] args) {	
+				   	 	Node n = new Node(3);
+				   	 	System.out.println(n.val);
+				   	}
+		   		}
+		   		class Node {
+		   			int val;
+		   			public Node(int val) {
+		   				this.val = val;
+		   			}
+		   		}
+		   		Then by debug, we can see, the reference n is on Stack, but the value
+		   		val = 3 is stored on Heap
+		   		
+		 3. Memory management in Stack is done in LIFO manner. 
+		    Memory management in Heap is more complex and requires complex algorithms
+		 
+		 4. Stack is similar to the data structure "stack" because both are LIFO; Heap has
+		    little to do with the Java data structure heap(PriorityQueue)
+		    
+		 5. Stack variable is destroyed after out of its scope(local variable is destroyed when out of function)
+		    Heap variable is destroyed by Garbage Collector(GC)
+		    
+		 6. Each thread has its own stack; multiple threads share the same heap (important)
+		 
+		 7. When stack memory is full, Java runtime throws Java.lang.StackOverFlowError whereas if heap memory is
+		    full, it throws java.lang.OutOfMemoryError
+		    
+		 8. Stack is much smaller than Heap, storing data into stack is faster than Heap
+		 
+		 
+	Final:
+		means constants: once assigned, cannot be changed.
+		
+		final class: A class that cannot be derived
+		final method: A method that cannot be overridden
+		final field: A variable that once assigned, cannot be assigned again
+		
+	
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
