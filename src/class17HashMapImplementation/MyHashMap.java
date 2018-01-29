@@ -166,10 +166,10 @@ public class MyHashMap<K, V> {
 		// for we need to call hash(key) % array.length to 
 		// get index of bucket, so hash(key) must be non-negative
 		// so we use a bit operation trick here
-		// 0FFFFFFF = 01111111 11111111 11111111 11111111
-		// key.hashCode() & 0X0FFFFFFF can flop negative bit 1 to 0
+		// 7FFFFFFF = 01111111 11111111 11111111 11111111
+		// key.hashCode() & 0X7FFFFFFF can flop negative bit 1 to 0
 		// without change other bits 1 or 0
-		return key.hashCode() & 0X0FFFFFFFF;
+		return key.hashCode() & 0X7FFFFFFF;
 	}
 	
 	/**
