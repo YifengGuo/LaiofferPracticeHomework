@@ -65,6 +65,7 @@ Object Memory Layout:
 		   		}
 		   		Then by debug, we can see, the reference n is on Stack, but the value
 		   		val = 3 is stored on Heap
+		   		The address in Heap is part of the reference
 		   		
 		 3. Memory management in Stack is done in LIFO manner. 
 		    Memory management in Heap is more complex and requires complex algorithms
@@ -90,7 +91,12 @@ Object Memory Layout:
 		final method: A method that cannot be overridden
 		final field: A variable that once assigned, cannot be assigned again
 		
-	
+	Java Parameter Passing:
+		Java is always passed by value (copy)
+			primitive types: passed by value itself
+			object: copy of the object reference!!!
+			
+			
 		 
 		 
 		 
