@@ -1,0 +1,8 @@
+When to choose what? ArrayList or LinkedList
+	1. If you have a lot of random access operations, use ArrayList (get and set is O(1) )
+	
+	2. If you always add/remove at the end, use ArrayList O(1)
+		2.1  When time complexity is similar for using ArrayList and LinkedList, use ArrayList
+		     (ArrayList use memory more efficiently- for each element LinkedList needs to create
+		     different ListNode in memory, there is extra cost of storing the "next" and "prev"
+		     references, and the allocation is not contiguous) ArrayList has better locality
