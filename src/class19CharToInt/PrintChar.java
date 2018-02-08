@@ -23,7 +23,7 @@ public class PrintChar {
 		
 		System.out.println(c);
 		
-		System.out.println('1' + '2' == '3');//false
+		System.out.println('1' + '2' == '3');//false == ascii 99
 		System.out.println('6' - '3' == 3);//true
 		
 		
