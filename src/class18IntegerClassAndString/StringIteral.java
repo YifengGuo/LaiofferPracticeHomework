@@ -25,7 +25,9 @@ public class StringIteral {
 		String sb = "b";
 		String sab = "a" + "b";//compile time concatenation, "ab"
 		System.out.println(sab == "a" + "b"); // true, compiler and JVM optimization
-		System.out.println(sab == sa + "b");// false, only when run time create a new String object
-		System.out.println(sab == sa + sb); // false, only when run time create a new String object
+		System.out.println(sab == sa + "b");// false, only when run time create a new String object, sa.concat("b")
+		System.out.println(sab == sa + sb); // false, only when run time create a new String object, sa.concat(sb)
+		// The reason above is because the optimization is at compile time, the literals will be concatenated
+		// if possible before getting the String object
 	}
 }
