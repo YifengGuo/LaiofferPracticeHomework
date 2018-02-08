@@ -19,8 +19,10 @@ public class Bit {
 		printBinary(a);
 		
 		a = -5;
-		printBinary(a);// use two's complement  -> binary number x, x'complement + 1 = -x 
+		printBinary(a);// use two's complement  -> binary number x, x'complement + 1 = -x
 		
+		// Integer.MAX_VALUE + 1 = Integer.MIN_VALUE
+		// Integer.MIN_VALUE - 1 = Integer.MAX_VALUE
 		a = Integer.MIN_VALUE;
 		printBinary(a);
 		
@@ -29,6 +31,8 @@ public class Bit {
 		
 		a = -1;
 		printBinary(a);
+		
+		printBinary(Integer.MIN_VALUE + 1);
 		
 		int b = a >> 5;//maintain symbol bit arithmetical shift
 		printBinary(b);
