@@ -29,5 +29,16 @@ public class StringIteral {
 		System.out.println(sab == sa + sb); // false, only when run time create a new String object, sa.concat(sb)
 		// The reason above is because the optimization is at compile time, the literals will be concatenated
 		// if possible before getting the String object
+		
+		// String concatenation:
+		   // s1.concat(s2) this will create a new String object rather than change the value of s1 or s2 due
+		   // to the immutability
+		
+		   // s1 = "abc" + "def" is the same as s1 = "abcdef", this happened during compile time for its optimization
+		
+		   // s1 = 1 + "def" String.valueOf(1) <=== (1 -> Integer(1) -> Integer(1).toString(1) -> "1") how 1 becomes "1"
+		
+		   // s1 = "id" + "2" + "isStudent: " + true + 'y'
+		   // could be further optimized using StringBuilder()   --> sb.append().append....
 	}
 }
