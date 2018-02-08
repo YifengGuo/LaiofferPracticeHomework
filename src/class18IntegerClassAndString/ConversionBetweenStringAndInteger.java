@@ -27,9 +27,7 @@ public class ConversionBetweenStringAndInteger {
 		Integer a = Integer.valueOf(s3);
 		// method 2
 		a = Integer.parseInt(s3);
-		
-		
-		
+
 	}
 	
 }
