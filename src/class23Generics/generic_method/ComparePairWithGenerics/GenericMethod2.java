@@ -1,6 +1,4 @@
-package class23Generics.generic_method;
-
-import class23Generics.generic_method.MyPair;
+package class23Generics.generic_method.ComparePairWithGenerics;
 
 public class GenericMethod2 {
 	public static void main(String[] args) {
