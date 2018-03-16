@@ -8,6 +8,11 @@ import java.util.List;
  *  primitive types (the compiler will keep the method signature and
  *  generate bridge method)
  */
+/*
+ * From type erasure:
+ * 	1. Generic types must be subclass of Object, or it cannot be converted to Object
+ *  2. Type-check during run time can only check its Original type (like ArrayList in the test program)
+ */
 public class GenericTypeErasure {
 	public static void main(String[] args) {
 		List<Integer> integerList = new ArrayList<>();
