@@ -82,7 +82,7 @@ public class TestWildCard {
 	
 	
 	
-	// List '<' ? extends Number> is actually an upper bound wildcard
+	// List '<' ? extends Employee> is actually an upper bound wildcard
 	// The upper-bounded wildcard says that any class that extends Employee or
 	// Employee itself can be used as the formal parameter type: The problem stems
 	// from the fact that Java doesn’t know what type List really is, so we can
