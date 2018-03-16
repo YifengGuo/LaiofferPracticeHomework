@@ -1,4 +1,4 @@
-package class23Generics.generic_method.ComparePairWithGenerics;
+package class23GenericsAndWildCard.generic_method.ComparePairWithGenerics;
 
 /*
  * <> means this is a generic class

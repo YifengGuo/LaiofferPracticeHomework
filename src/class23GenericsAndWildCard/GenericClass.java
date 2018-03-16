@@ -1,4 +1,4 @@
-package class23Generics;
+package class23GenericsAndWildCard;
 /**
  * 
  * @author guoyifeng

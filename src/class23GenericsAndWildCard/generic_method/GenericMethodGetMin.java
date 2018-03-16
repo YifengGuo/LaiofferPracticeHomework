@@ -1,4 +1,4 @@
-package class23Generics.generic_method;
+package class23GenericsAndWildCard.generic_method;
 /**
  * 
  * @author guoyifeng

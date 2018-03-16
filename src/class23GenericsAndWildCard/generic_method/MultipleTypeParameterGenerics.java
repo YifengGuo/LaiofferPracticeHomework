@@ -1,4 +1,4 @@
-package class23Generics.generic_method;
+package class23GenericsAndWildCard.generic_method;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

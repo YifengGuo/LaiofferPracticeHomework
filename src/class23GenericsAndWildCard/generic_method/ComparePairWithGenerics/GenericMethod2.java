@@ -1,4 +1,4 @@
-package class23Generics.generic_method.ComparePairWithGenerics;
+package class23GenericsAndWildCard.generic_method.ComparePairWithGenerics;
 
 public class GenericMethod2 {
 	public static void main(String[] args) {
