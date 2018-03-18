@@ -24,7 +24,7 @@ import java.util.Arrays;
  *  
  *  Set<Map.Entry<K, V>> entrySet() - get the set view of all the entries in the HashMap<br>
  *  Set<K> keySet() - get the set view of all the keys in the HashMap<br>
- *  Collection<V> values - get the collection view of all the valus in the HashMap<br>
+ *  Collection<V> values - get the collection view of all the values in the HashMap<br>
  *  boolean containsValue(V value)            O(n)<br>
  *  void clear()<br>
  *  int size()<br>
@@ -49,6 +49,12 @@ import java.util.Arrays;
  *          2. open addressing - put the <K, V> into the "next" available bucket<br>
  *          	next: linear/quadratic/exponential probing, hash again<br>
  *          	challenge: handling removed keys in the map, so java use separate chaining strategy<br>
+ *                         Assume hash(x) = hash(y) = hash(z) = i. And assume x was inserted first, then y and then z. 
+ *				           In open addressing: table[i] = x, table[i+1] = y, table[i+2] = z.
+ *				           Now, assume you want to delete x, and set it back to NULL.
+ *				           When later you will search for z, you will find that hash(z) = i and table[i] = NULL, and you will return a wrong answer: z is not in the table.
+ *				           To overcome this, you need to set table[i] with a special marker indicating to the search function to keep looking at index i+1, 
+ *                         because there might be element there which its hash is also i
  *          
  *  Rehashing factor:<br>
  *  	be called when too many <K,V> pairs in the map   --> high chance get collision<br>
@@ -266,7 +272,7 @@ public class MyHashMap<K, V> {
 		if (!this.containsKey(key)) {
 			return null;
 		}
-		int index = hash(key);
+		int index = getIndex(key);
 		Entry<K, V> e = array[index];
 		while (e != null) { // several keys may map to the same bucket, so we need to iterate the whole LinkedList
 			if (equalsKey(e.getKey(), key)) {
