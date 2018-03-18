@@ -4,8 +4,8 @@ public class TryCatchBlockTest {
 	public static void test() throws IllegalAccessException {
 		try {
 			throw new NullPointerException("demo");
-			//System.out.println("hello"); //if exception has been throwed, the 
-										   //code below it could not be executed
+			// System.out.println("hello"); //if exception has been thrown, the 
+										    //code below it could not be executed
 		} catch(NullPointerException e) {
 			System.out.println("Caught inside test()");
 			throw e;
