@@ -84,7 +84,7 @@ public class MyHashMap<K, V> {
 	// may need access it from outer class, so we need to use 
 	// inner static class
 	public static class Entry<K, V> {
-		final K key; // ket cannot be changed
+		final K key; // key cannot be changed
 		V value;
 		Entry<K, V> next;
 		
