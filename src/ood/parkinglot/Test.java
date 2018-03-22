@@ -4,9 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Test {
-
+	// to enable assert
+	// Add "-ea" in VM arguments in Run Configurations
+	// assert keyword is equal to 
+	// assert cond == 
+	// if (!cond) {
+	//     Throw new AssertionError();
+	// }
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ParkingLot pl = new ParkingLot(4, 10);
 		List<Vehicle> list = new ArrayList<>();
 		for(int i = 0; i < 50; i++) {
@@ -17,15 +22,15 @@ public class Test {
 				assert hasSpot;
 				assert pl.park(v);
 			} else {
-				assert !hasSpot;
-				assert !pl.park(v);
+				assert hasSpot;
+				assert pl.park(v);
 			}
 		}
 		
 		assert list.size() == 50;
 		int i = 0;
 		for(Vehicle v : list) {
-			assert i >= 40 || pl.leave(v);
+			assert i < 50 || pl.leave(v);
 			i++;
 		}
 
