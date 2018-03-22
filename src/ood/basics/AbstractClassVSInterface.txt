@@ -1,0 +1,31 @@
+1. An abstract class provides a common base class implementation to derived
+   classes. Use abstract class (or even concrete class) for base class if
+   the derived classes share common implementation
+   
+   Example:
+       Base class: House
+       Derived class: Townhouse, SingleFamilyHouse
+       
+
+2. Interface helps you (or enforces you) to focus on the API signature
+   definition.
+   
+   Example:
+       Interface: Collection: add(E e), size(), contains(Object o)
+       Collection's subclasses may share NO common implementation at all
+       the logic of adding elements for LinkedList and PriorityQueue is 
+       totally different
+   
+   
+3. Multiple inheritance: implement multiple interfaces
+   Example:
+       ArrayList implements:
+           Serializable, Cloneable, Iterable<E>, Collection<E>, List<E>,
+           RandomAccess
+           
+           
+4. The relationship between the interface itself and the class implementing
+   the interface is NOT necessarily strong
+   Example:
+       class House implements AirConditioning
+       ArrayList implements Serializable
