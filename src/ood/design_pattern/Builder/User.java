@@ -61,7 +61,12 @@ public class User {
 						.address("Rutgers,New Jersey")
 						.build();
 		
+		User user2 = new UserBuilder("William", "Kuo")
+			             .age(24)
+			             .build();
+		
 		System.out.println(user.toString());
+		System.out.println(user2.toString());
 	}
 	
 	
